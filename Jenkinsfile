@@ -14,7 +14,7 @@ pipeline {
 
                 withMaven(maven : 'maven_3_6_1') {
 
-                    'mvn clean compile'
+                   bat label: '', script: 'mvn compile'
 
                 }
 
@@ -32,7 +32,7 @@ pipeline {
 
                 withMaven(maven : 'maven_3_6_1') {
 
-                    'mvn test'
+                    bat label: '', script: 'mvn test'
 
                 }
 
@@ -50,7 +50,7 @@ pipeline {
 
                 withMaven(maven : 'maven_3_6_1') {
 
-                    'mvn deploy'
+                    bat label: '', script: 'mvn deploy'
 
                 }
 

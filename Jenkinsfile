@@ -10,9 +10,9 @@ pipeline {
 
 
 
-            steps {
+            steps 
 
-                withMaven(maven : 'maven_3_6_1') {
+              {
 
                    bat label: '', script: 'mvn compile'
 
@@ -20,23 +20,20 @@ pipeline {
 
             }
 
-        }
-
-
-
+        
         stage ('Testing Stage') {
 
 
 
-            steps {
+            steps 
 
-                withMaven(maven : 'maven_3_6_1') {
+                 {
 
                     bat label: '', script: 'mvn test'
 
                 }
 
-            }
+            
 
         }
 
@@ -46,9 +43,9 @@ pipeline {
 
         stage ('Deployment Stage') {
 
-            steps {
+            steps 
 
-                withMaven(maven : 'maven_3_6_1') {
+                {
 
                     bat label: '', script: 'mvn deploy'
 
@@ -56,7 +53,7 @@ pipeline {
 
             }
 
-        }
+        
 
     }
 

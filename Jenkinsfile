@@ -41,13 +41,13 @@ pipeline {
 
 
 
-        stage ('Deployment Stage') {
+        stage ('Package Stage') {
 
             steps 
 
                 {
 
-                    bat label: '', script: 'mvn deploy'
+                    bat label: '', script: 'mvn package'
 
                 }
 

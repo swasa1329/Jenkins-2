@@ -12,9 +12,9 @@ pipeline {
 
             steps {
 
-                withMaven(maven : 'maven_3_5_0') {
+                withMaven(maven : 'maven_3_6_1') {
 
-                    sh 'mvn clean compile'
+                    'mvn clean compile'
 
                 }
 
@@ -30,9 +30,9 @@ pipeline {
 
             steps {
 
-                withMaven(maven : 'maven_3_5_0') {
+                withMaven(maven : 'maven_3_6_1') {
 
-                    sh 'mvn test'
+                    'mvn test'
 
                 }
 
@@ -48,9 +48,9 @@ pipeline {
 
             steps {
 
-                withMaven(maven : 'maven_3_5_0') {
+                withMaven(maven : 'maven_3_6_1') {
 
-                    sh 'mvn deploy'
+                    'mvn deploy'
 
                 }
 
